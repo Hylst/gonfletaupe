@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Gonfle-Taupe, l'aventure souterraine</title>
+    <meta name="description" content="Gonfle-Taupe : creusez vos propres tunnels, gonflez les monstres à la pompe jusqu'à ce qu'ils explosent, et lâchez des rochers sur ceux qui résistent. Niveaux infinis, combos, power-ups." />
+    <meta name="keywords" content="gonfle taupe, dig dug, creuser, tunnels, arcade, pompe, rochers, jeu html5, jeu gratuit, jeu francais, hylst" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gonfle-Taupe, l'aventure souterraine" />
+    <meta property="og:description" content="Creusez vos tunnels, gonflez les monstres à la pompe, lâchez des rochers sur les récalcitrants. Niveaux infinis, combos, power-ups. Direct dans le navigateur." />
+    <meta property="og:image" content="https://games.hylst.fr/gonfletaupe/og-image.png" />
+    <meta property="og:url" content="https://games.hylst.fr/gonfletaupe/" />
+    <meta property="og:site_name" content="Hylst.Games" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gonfle-Taupe, l'aventure souterraine" />
+    <meta name="twitter:description" content="Creusez vos tunnels, gonflez les monstres à la pompe, lâchez des rochers sur les récalcitrants." />
+    <meta name="twitter:image" content="https://games.hylst.fr/gonfletaupe/og-image.png" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0a20" />
+    <link rel="canonical" href="https://games.hylst.fr/gonfletaupe/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <style>
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.15; }
+      }
+      .blink {
+        animation: blink 1.5s ease-in-out infinite;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #0a0a20;
+      }
+      /* Scrollbar styling */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #0a0a20; }
+      ::-webkit-scrollbar-thumb { background: #4A2080; border-radius: 3px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

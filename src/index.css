@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Police rétro pour le jeu */
+@font-face {
+  font-family: 'GameFont';
+  src: local('Courier New'), local('Courier'), local('monospace');
+}
+
+/* Empêcher la sélection de texte pendant le jeu */
+canvas {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
+}
+
+/* Animation de pulsation douce */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(74, 32, 128, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(74, 32, 128, 0.6), 0 0 60px rgba(74, 32, 128, 0.2); }
+}
+
+/* Empêcher le scroll du body */
+html, body {
+  overflow: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  height: 100%;
+}
