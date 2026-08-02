@@ -11,6 +11,7 @@ type Screen = 'menu' | 'playing' | 'gameover';
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('menu');
+  const [showInfo, setShowInfo] = useState(false);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
   const [highScore, setHighScore] = useState(() => {
@@ -165,6 +166,31 @@ export default function App() {
             <p className="text-gray-600 text-[10px] mt-2">
               Clavier requis • Meilleur sur bureau
             </p>
+            <button
+              onClick={() => setShowInfo(true)}
+              className="mt-3 text-purple-300/70 text-[10px] uppercase tracking-wider underline decoration-dotted hover:text-purple-200 transition-colors cursor-pointer"
+            >
+              ℹ️ Comment ce jeu a été fait
+            </button>
+          </div>
+        </div>
+      )}
+
+      {showInfo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4" onClick={() => setShowInfo(false)}>
+          <div className="w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-xl bg-gradient-to-b from-[#1a1040] to-[#0d0825] border border-purple-800/50 shadow-2xl" onClick={e => e.stopPropagation()}>
+            <div className="p-5 sm:p-6 space-y-3.5 text-sm leading-relaxed text-gray-300">
+              <h3 className="text-white text-lg font-bold tracking-wider uppercase border-b border-purple-700/40 pb-2">Comment ce jeu a été fait</h3>
+              <p><strong className="text-white">Stack :</strong> React 19, TypeScript 5.9, Tailwind CSS 4, Vite 7, compilé en un seul fichier HTML, aucune dépendance chargée depuis l'extérieur.</p>
+              <p><strong className="text-white">Graphismes :</strong> tout est dessiné en Canvas 2D à chaque image (tunnels, taupe, rochers, ennemis), aucun sprite ni image externe.</p>
+              <p><strong className="text-white">Musique &amp; sons :</strong> synthétisés en direct avec l'API Web Audio, aucun fichier audio chargé.</p>
+              <p><strong className="text-white">Interactions :</strong> clavier (flèches ou ZQSD pour se déplacer et creuser en poussant contre la terre), espace maintenu pour pomper un ennemi ciblé au harpon jusqu'à ce qu'il explose.</p>
+              <p><strong className="text-white">Architecture :</strong> moteur de jeu et rendu séparés (`gameEngine.ts` pur, `renderer.ts` pour le dessin), une seule boucle de jeu qui met à jour la grille de terre, les rochers et chaque ennemi selon son propre état (fantôme traversant la terre, gonflement, fuite).</p>
+              <p><strong className="text-white">Algorithmes notables :</strong> les rochers vérifient à chaque tick la case juste en dessous d'eux : creuser cette case déclenche leur chute, qui écrase tout ennemi sur la trajectoire sauf les fantômes (seuls capables de traverser la terre non creusée). Les Fygars crachent du feu en ligne droite si la taupe est alignée avec eux, leur nombre augmentant avec le niveau.</p>
+            </div>
+            <div className="border-t border-purple-900/30 p-4 text-center">
+              <button onClick={() => setShowInfo(false)} className="px-6 py-2.5 rounded-xl font-bold text-white bg-gradient-to-b from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 active:scale-95 transition-all">Fermer</button>
+            </div>
           </div>
         </div>
       )}

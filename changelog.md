@@ -3,6 +3,18 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), versionnage
 [SemVer](https://semver.org/lang/fr/).
 
+## [1.1.0] 2026-08-02
+
+### Ajouté
+- Lien « ℹ️ Comment ce jeu a été fait » (écran de menu) ouvrant une modale avec la stack,
+  les graphismes, la musique, les interactions, l'architecture et les algorithmes notables
+  (chute des rochers, fantômes traversant la terre, Fygars cracheurs de feu). Étape 15 du
+  chantier de retrofit décrit dans `todo.md` racine du monorepo.
+
+### Vérifié
+- Build propre, modale testée à l'ouverture/fermeture, aucune erreur console, aucun
+  débordement horizontal en 390×844.
+
 ## [1.0.0] 2026-07-31
 
 Première version intégrable à Hylst.Games, partie d'un export brut audité puis corrigé.
