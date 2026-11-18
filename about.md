@@ -26,5 +26,5 @@ souterrain, sans reprendre le nom de la licence dont il s'inspire.
 
 ## Contact
 
-- Email : geoffroy.streit@gmail.com
+- Email : geoffroy.streit@ik.me
 - Plateforme : [games.hylst.fr](https://games.hylst.fr/)
