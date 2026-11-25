@@ -48,3 +48,6 @@ prompts/
 Thumbs.db
 .idea/
 .vscode/
+
+# Agents et secrets locaux (garde-fou du 25/11/2026)
+agents.md
