@@ -164,7 +164,7 @@ export default function App() {
               avec l'aide d'une IA
             </p>
             <p className="text-gray-600 text-[10px] mt-2">
-              Clavier requis • Meilleur sur bureau
+              Clavier recommandé, tactile pris en charge
             </p>
             <button
               onClick={() => setShowInfo(true)}

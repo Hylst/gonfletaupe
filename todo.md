@@ -81,3 +81,7 @@ bien exactement une ligne au-dessus du premier sol rencontré, avant et après l
   rocher.
 - [ ] `enemy.hookedBy` est un champ `number | null` mais ne reçoit jamais que `0` (jeu à un
   seul joueur) : autant en faire un booléen.
+
+## Audit du 27/11/2026
+
+- [ ] Tester la pompe tactile sans clavier et confirmer la formulation « Clavier recommandé, tactile pris en charge ».
